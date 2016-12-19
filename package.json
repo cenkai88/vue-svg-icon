@@ -1,6 +1,6 @@
 {
   "name": "vue-svg-icon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a simple solution for multicolor svg icon in vue",
   "scripts": {
     "dev": "node build/dev-server.js",
