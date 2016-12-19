@@ -2,70 +2,82 @@
   <div id="app">
     <h3>a simple solution for multicolor svg icon in Vue</h3>
     <div id="svg-icon-logo">
-      <icon slot="icon" name="chameleon" :scale="20" class="spin"></icon>
+      <icon slot="icon" name="chameleon" :scale="20"></icon>
     </div>
     <div id="container">
       <section>
         <h4>simple usage</h4>
-        <icon slot="icon" name="chameleon" :scale="20" style="color: blue;"></icon>
+        <span><icon slot="icon" name="chameleon" scale="20" style="color: #05CE7C;"></icon></span>
         <code>
           <pre><strong>html:</strong>
-&lt;icon slot="icon" name="cup" :scale="20" style="color: blue;">&lt;/icon></pre>
+&lt;icon <span class="attr">name</span>=<span class="val">"chameleon"</span> <span class="attr">scale</span>=<span class="val">"20"</span> <span
+              class="attr">style</span>=<span class="val">"color: #05CE7C;"</span>>&lt;/icon></pre>
+        </code>
+      </section>
+      <section>
+        <h4>spin</h4>
+        <span><icon slot="icon" name="sun" scale="20" spin></icon></span>
+        <code>
+          <pre><strong>html:</strong>
+&lt;icon <span class="attr">name</span>=<span class="val">"sun"</span> <span class="attr">scale</span>=<span class="val">"20"</span> <span class="attr">spin</span>>&lt;/icon></pre>
         </code>
       </section>
       <section>
         <h4>hover to change</h4>
-        <icon slot="icon" name="chameleon" :scale="20" id="hover"></icon>
+        <span><icon name="settings" scale="20" id="hover"></icon></span>
         <code>
           <pre><strong>html:</strong>
-&lt;icon slot="icon" name="cup" :scale="20" id="hover">&lt;/icon>
+&lt;icon <span class="attr">name</span>=<span class="val">"settings"</span> <span class="attr">scale</span>=<span class="val">"20"</span> <span
+              class="attr">id</span>=<span class="val">"hover"</span>>&lt;/icon>
 <strong>css3:</strong>
 #hover:hover {
-    color:gold
+    <span class="attr">color</span>:<span class="val">gold</span>
 }</pre>
         </code>
       </section>
       <section>
         <h4>click to change</h4>
-        <icon slot="icon" name="chameleon" :scale="20" id="click"></icon>
+        <span><icon name="unlock" scale="20" id="click"></icon></span>
         <code>
           <pre><strong>html:</strong>
-&lt;icon slot="icon" name="octopus" :scale="20" id="click">&lt;/icon>
+&lt;icon <span class="attr">name</span>=<span class="val">"unlock"</span> <span class="attr">scale</span>="20" <span
+              class="attr">id</span>=<span class="val">"click"</span>>&lt;/icon>
 <strong>css3:</strong>
 #click:active {
-    color:white
+    <span class="attr">color</span>:<span class="val">white</span>
 }</pre>
         </code>
       </section>
       <section>
         <h4>animation</h4>
-        <icon slot="icon" name="cup" :scale="20" id="animation"></icon>
+        <span><icon slot="icon" name="chameleon" scale="20" id="animation"></icon></span>
         <code>
           <pre><strong>html:</strong>
-&lt;icon slot="icon" name="chameleon" :scale="20" id="animation">&lt;/icon>
+&lt;icon <span class="attr">name</span>=<span class="val">"chameleon"</span> <span class="attr">scale</span>=<span
+              class="val">"20"</span> <span class="attr">id</span>=<span class="val">"animation"</span>>&lt;/icon>
 <strong>css3:</strong>
 #animation {
-    animation: changeColor 5s infinite step-end;
+  <span class="attr">animation</span>: <span class="val">changeColor 5s infinite step-end</span>;
 }
 @keyframes changeColor {
-    0% {
-        color: red;
-    }
-    20% {
-        color: yellow;
-    }
-    40% {
-        color: blue;
-    }
-    60% {
-        color: green;
-    }
-    80% {
-        color: purple;
-    }
-    100% {
-        color: gold;
-    }
+  0% {
+      <span class="attr">color</span>: <span class="val">red</span>;
+  }
+  20% {
+      <span class="attr">color</span>: <span class="val">yellow</span>;
+  }
+  40% {
+      <span class="attr">color</span>: <span class="val">blue</span>;
+  }
+  60% {
+      <span class="attr">color</span>: <span class="val">green</span>;
+  }
+  80% {
+      <span class="attr">color</span>: <span class="val">purple</span>;
+  }
+  100% {
+      <span class="attr">color</span>: <span class="val">gold</span>;
+  }
 }</pre>
         </code>
       </section>
@@ -74,7 +86,7 @@
 </template>
 
 <script>
-
+  import {warn} from 'util'
   export default {
     name: 'app',
     components: {}
@@ -90,7 +102,6 @@
     color: #2c3e50;
     margin-top: 60px;
   }
-
   #svg-icon-logo, #animation {
     animation: changeColor 5s infinite linear;
   }
@@ -126,13 +137,30 @@
       h4 {
         width: 100%;
       }
-      svg {
-        padding: 5px;
+      .attr {
+        color: #e96900;
+      }
+      .val {
+        color: #42b983;
+      }
+      > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        width: 48px;
         border: 1px solid #888;
         border-radius: 4px;
+        svg {
+          color: #05CE7C;
+        }
       }
       code {
-        width: 90%;
+        color: #2973b7;
+        strong {
+          color: #111;
+        }
+        width: 80%;
         border-radius: 3px;
         margin-left: 15px;
         padding: 4px 10px;
@@ -140,8 +168,14 @@
         line-height: 20px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
       }
+      #hover {
+        color: grey;
+      }
       #hover:hover {
         color: gold;
+      }
+      #click {
+        color: #424242;
       }
       #click:active {
         color: white;

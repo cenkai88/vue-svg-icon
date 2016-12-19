@@ -34,7 +34,7 @@
 </style>
 
 <script>
-  import {warn} from '../util'
+  import {warn} from 'util'
 
   let icons = {};
 
@@ -103,7 +103,6 @@
     },
     inject: function (svgFile) {
       const xml = require('./svg/' + svgFile + '.svg');
-      console.log(xml);
       icons[svgFile] = xml.svg.$;
       let tmpView = xml.svg.$.viewBox.split(' ');
       icons[svgFile].width = 200;
@@ -113,7 +112,6 @@
       if (xml.svg.g && !xml.svg.path) xml.svg.path = xml.svg.g[0].path;
       for (let i = 0, max = xml.svg.path.length; i < max; i++) {
         icons[svgFile].paths.push(xml.svg.path[i].$);
-        console.log(xml.svg)
       }
     },
     icons

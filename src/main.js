@@ -4,6 +4,9 @@ import Vue from 'vue';
 import App from './App';
 import Icon from 'vue-svg-icon/Icon.vue';
 Icon.inject('chameleon');
+Icon.inject('settings');
+Icon.inject('unlock');
+Icon.inject('sun');
 
 Vue.component('icon', Icon);
 

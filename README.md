@@ -33,7 +33,7 @@ change the loader in webpack.conf.js (or webpack.base.conf.js)
 ```
 import Icon from 'vue-svg-icon/Icon.vue';
 Vue.component('icon', Icon);  
-Icon.inject('chameleon'); //the name of your svg pic
+Icon.inject('chameleon'); // the name of your svg pic
 ```
 ### 5. use the svg icon in your vue
 ```
