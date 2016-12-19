@@ -1,5 +1,5 @@
 # vue-svg-icon
-> a solution for multicolor svg icons in vue
+> a solution for multicolor svg icons in vue  
 ##### v1.0.5
 demo https://cenkai88.github.io/vue-svg-icon/demo/
 
