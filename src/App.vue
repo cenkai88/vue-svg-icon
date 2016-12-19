@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h3>a simple solution for multicolor svg icon in Vue</h3>
+    <h3>a simple solution for multicolor svg icon in Vue2.0</h3>
     <div id="svg-icon-logo">
       <icon slot="icon" name="chameleon" :scale="20"></icon>
     </div>
