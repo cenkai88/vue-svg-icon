@@ -102,7 +102,7 @@
       }
     },
     inject: function (svgFile) {
-      const xml = require('../svg/' + svgFile + '.svg');
+      const xml = require('./svg/' + svgFile + '.svg');
       console.log(xml);
       icons[svgFile] = xml.svg.$;
       let tmpView = xml.svg.$.viewBox.split(' ');

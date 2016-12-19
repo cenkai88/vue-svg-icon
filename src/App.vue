@@ -2,12 +2,12 @@
   <div id="app">
     <h3>a simple solution for multicolor svg icon in Vue</h3>
     <div id="svg-icon-logo">
-      <icon slot="icon" name="cup" :scale="20" class="spin"></icon>
+      <icon slot="icon" name="chameleon" :scale="20" class="spin"></icon>
     </div>
     <div id="container">
       <section>
         <h4>simple usage</h4>
-        <icon slot="icon" name="cup" :scale="20" style="color: blue;"></icon>
+        <icon slot="icon" name="chameleon" :scale="20" style="color: blue;"></icon>
         <code>
           <pre><strong>html:</strong>
 &lt;icon slot="icon" name="cup" :scale="20" style="color: blue;">&lt;/icon></pre>
@@ -15,7 +15,7 @@
       </section>
       <section>
         <h4>hover to change</h4>
-        <icon slot="icon" name="cup" :scale="20" id="hover"></icon>
+        <icon slot="icon" name="chameleon" :scale="20" id="hover"></icon>
         <code>
           <pre><strong>html:</strong>
 &lt;icon slot="icon" name="cup" :scale="20" id="hover">&lt;/icon>
@@ -27,7 +27,7 @@
       </section>
       <section>
         <h4>click to change</h4>
-        <icon slot="icon" name="octopus" :scale="20" id="click"></icon>
+        <icon slot="icon" name="chameleon" :scale="20" id="click"></icon>
         <code>
           <pre><strong>html:</strong>
 &lt;icon slot="icon" name="octopus" :scale="20" id="click">&lt;/icon>
@@ -39,7 +39,7 @@
       </section>
       <section>
         <h4>animation</h4>
-        <icon slot="icon" name="chameleon" :scale="20" id="animation"></icon>
+        <icon slot="icon" name="cup" :scale="20" id="animation"></icon>
         <code>
           <pre><strong>html:</strong>
 &lt;icon slot="icon" name="chameleon" :scale="20" id="animation">&lt;/icon>

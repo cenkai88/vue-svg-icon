@@ -51,7 +51,7 @@ module.exports = {
       },
       {
         test:/\.svg$/,
-        loader: 'xml'
+        loader: 'xml-loader'
       },
       {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,
