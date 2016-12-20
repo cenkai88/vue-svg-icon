@@ -7,6 +7,10 @@ Icon.inject('chameleon');
 Icon.inject('settings');
 Icon.inject('unlock');
 Icon.inject('sun');
+Icon.inject('cup');
+Icon.inject('pie');
+Icon.inject('settings2');
+Icon.inject('roboAd');
 
 Vue.component('icon', Icon);
 
