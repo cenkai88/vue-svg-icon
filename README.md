@@ -1,5 +1,6 @@
 # vue-svg-icon  
-> a solution for multicolor svg icons in vue  
+> a solution for multicolor svg icons in vue2
+> [轻量的Vue2多色动态svg图标方案](#chineseVersion)
 
 ##### v1.0.5
 demo https://cenkai88.github.io/vue-svg-icon/demo/
@@ -57,5 +58,10 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 ```
+
+##chineseVersion
+### 1. 安装
+
+
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
