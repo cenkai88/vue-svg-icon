@@ -7,6 +7,7 @@
 **features:** 
 - real-time svg editing in illustrator  
 - dynamically set the color of ONE PART of the svg through css 'color' property  
+- **an awesome svg icon site [iconfont](http://www.iconfont.cn)**
 
 ## Usage
 ### 1. install
