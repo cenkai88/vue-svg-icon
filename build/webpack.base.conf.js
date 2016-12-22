@@ -50,10 +50,6 @@ module.exports = {
         loader: 'json'
       },
       {
-        test:/\.svg$/,
-        loader: 'xml-loader'
-      },
-      {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'url',
         query: {

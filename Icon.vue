@@ -54,14 +54,16 @@
           return val === 'horizontal' || val === 'vertical'
         }
       },
-      label: String
+      label: String,
+      index: String,
+      currentIndex: String
     },
     computed: {
       normalizedScale() {
         let scale = this.scale
-        scale = typeof scale === 'undefined' ? 1 : Number(scale)
+        scale = typeof scale === 'undefined' ? 1 : Number(scale);
         if (isNaN(scale) || scale <= 0) {
-          warn(`Invalid prop: prop "scale" should be a number over 0.`, this)
+          warn(`Invalid prop: prop "scale" should be a number over 0.`, this);
           return 1
         }
         return scale
@@ -71,7 +73,8 @@
           'svg-icon': true,
           spin: this.spin,
           'flip-horizontal': this.flip === 'horizontal',
-          'flip-vertical': this.flip === 'vertical'
+          'flip-vertical': this.flip === 'vertical',
+          active: this.index === this.currentIndex
         }
       },
       icon() {
@@ -102,9 +105,8 @@
       }
     },
     inject: function (svgFile) {
-      const xml = require('./svg/' + svgFile + '.svg');
+      let xml = require(`!xml-loader!../../src/svg/${svgFile}.svg`);
       icons[svgFile] = xml.svg.$;
-      let tmpView = xml.svg.$.viewBox.split(' ');
       icons[svgFile].width = 200;
       icons[svgFile].height = 200;
       icons[svgFile].paths = [];
