@@ -34,7 +34,6 @@
 </style>
 
 <script>
-  import {warn} from 'util'
 
   let icons = {};
 
@@ -63,7 +62,7 @@
         let scale = this.scale
         scale = typeof scale === 'undefined' ? 1 : Number(scale);
         if (isNaN(scale) || scale <= 0) {
-          warn(`Invalid prop: prop "scale" should be a number over 0.`, this);
+          console.warn(`Invalid prop: prop "scale" should be a number over 0.`, this);
           return 1
         }
         return scale
@@ -107,8 +106,9 @@
     inject: function (svgFile) {
       let xml = require(`!xml-loader!../../src/svg/${svgFile}.svg`);
       icons[svgFile] = xml.svg.$;
-      icons[svgFile].width = 200;
-      icons[svgFile].height = 200;
+      const t = xml.svg.$.viewBox.split(' ');
+      icons[svgFile].width = t[2];
+      icons[svgFile].height = t[3];
       icons[svgFile].paths = [];
       // deal with the illustrator generated svg
       if (xml.svg.g && !xml.svg.path) xml.svg.path = xml.svg.g[0].path;

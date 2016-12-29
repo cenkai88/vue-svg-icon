@@ -2,7 +2,7 @@
 > a solution for multicolor svg icons in vue2
 > [轻量的Vue2多色动态svg图标方案 中文版说明](#chineseversion)
 
-##### v1.0.9
+##### v1.0.10
 **demo:** https://cenkai88.github.io/vue-svg-icon/demo/  
 **features:** 
 - real-time svg editing in illustrator  
