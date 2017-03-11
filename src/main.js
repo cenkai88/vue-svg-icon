@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
-import Icon from '../Icon.vue';
+import Icon from 'vue-svg-icon';
 Icon.inject('chameleon');
 Icon.inject('settings');
 Icon.inject('unlock');

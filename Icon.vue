@@ -1,7 +1,7 @@
 <template>
   <svg version="1.1" :class="clazz" :role="label ? 'img' : 'presentation'" :aria-label="label" :width="width"
        :height="height" :viewBox="box" :style="style">
-    <path :d="path.d" :fill="path.fill" v-for="path in icon.paths"/>
+    <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths"/>
   </svg>
 </template>
 
@@ -35,16 +35,13 @@
 
 <script>
 
-  let icons = {};
+  const convert = require('./parse');
 
   export default {
     props: {
       name: {
         type: String,
-        required: true,
-        validator: function (val) {
-          return val in icons
-        }
+        required: true
       },
       scale: [Number, String],
       spin: Boolean,
@@ -77,12 +74,12 @@
         }
       },
       icon() {
-        if (icons[this.name].paths && Array.isArray(icons[this.name].paths)) {
-          return icons[this.name]
-        }
-        else {
-          icons[this.name].paths = [{"d": icons[this.name].d}];
-          return icons[this.name]
+        let xml = require(`!xml-loader!../../src/svg/${this.name}.svg`);
+        const t = xml.svg.$.viewBox.split(' ');
+        return {
+          width: t[2],
+          height: t[3],
+          paths: convert.SVGtoArray(xml.svg)
         }
       },
       box() {
@@ -103,19 +100,8 @@
         }
       }
     },
-    inject: function (svgFile) {
-      let xml = require(`!xml-loader!../../src/svg/${svgFile}.svg`);
-      icons[svgFile] = xml.svg.$;
-      const t = xml.svg.$.viewBox.split(' ');
-      icons[svgFile].width = t[2];
-      icons[svgFile].height = t[3];
-      icons[svgFile].paths = [];
-      // deal with the illustrator generated svg
-      if (xml.svg.g && !xml.svg.path) xml.svg.path = xml.svg.g[0].path;
-      for (let i = 0, max = xml.svg.path.length; i < max; i++) {
-        icons[svgFile].paths.push(xml.svg.path[i].$);
-      }
+    inject: function () {
+      console.warn("inject deprecated since v1.2.0, SVG files can be loaded directly, so just delete the inject line.")
     },
-    icons
   }
 </script>
