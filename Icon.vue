@@ -56,7 +56,7 @@
     },
     computed: {
       normalizedScale() {
-        let scale = this.scale
+        let scale = this.scale;
         scale = typeof scale === 'undefined' ? 1 : Number(scale);
         if (isNaN(scale) || scale <= 0) {
           console.warn(`Invalid prop: prop "scale" should be a number over 0.`, this);
