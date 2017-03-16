@@ -4,3 +4,5 @@ node_modules/
 .editorconfig
 .npmignore
 npm-debug.log
+index.html
+.babelrc

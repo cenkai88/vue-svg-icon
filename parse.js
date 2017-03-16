@@ -8,7 +8,7 @@ function SVGtoArray(svgObj) {
   let node, subNode, groupNode, subsubNode;
 
   for (node in svgObj) {
-    if (['rect', 'circle', 'ellipse', 'polygon', 'line', 'path'].includes(node)) {
+    if (node ==='rect' || node === 'circle'|| node ==='ellipse'|| node === 'polygon'|| node ==='line'|| node === 'path') {
       for (subNode of svgObj[node]) {
         SVGArray.push(convertShapeToPath(subNode.$, node))
       }
@@ -16,7 +16,7 @@ function SVGtoArray(svgObj) {
     else if (node === 'g') {
       for (groupNode of svgObj[node]) {
         for (subNode in groupNode) {
-          if (['rect', 'circle', 'ellipse', 'polygon', 'line', 'path'].includes(subNode)) {
+          if (node ==='rect' || node === 'circle'|| node ==='ellipse'|| node === 'polygon'|| node ==='line'|| node === 'path') {
             for (subsubNode of groupNode[subNode]) {
               SVGArray.push(convertShapeToPath(subsubNode.$, subNode))
             }
