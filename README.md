@@ -39,7 +39,7 @@ Vue.component('icon', Icon);
 - the color of stroke can be controlled through **stroke** property of icon if set as #000000 (since v1.1.0).
 - recommended size of SVG is 200*200
 
-###Trouble Shooting
+### Trouble Shooting
 1. cannot find corresponding .svg file in vue-svg-icon/svg when you inject it in main.js, please keep the name in main.js and the filename exactly same.
 ```
 [Vue warn]: Invalid prop: custom validator check failed for prop "name". 
@@ -54,10 +54,9 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 ```
-
-
-#chineseVersion
-**示例:** https://cenkai88.github.io/vue-svg-icon/demo/  
+  
+## 中文版本说明
+**示例:** https://cenkai88.github.io/vue-svg-icon/demo/  
 **特点:** 
 - **不再需要通过inject注册SVG**
 - 支持SVG文件中path, circle, ellipse, rect, line, polyline, polygon 标签
@@ -71,7 +70,7 @@ npm install vue-svg-icon --save-dev
 ```
 
 ### 2. 将svg图片放入src/svg/
-#####这里安利一个svg图片库[iconfont](http://www.iconfont.cn/plus)
+#### 这里安利一个svg图片库[iconfont](http://www.iconfont.cn/plus)
 - src/svg路径暂时不可配置
 - src文件夹应和node_modules在同一个文件夹下
 
