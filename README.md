@@ -55,7 +55,8 @@ npm install
 npm run dev
 ```
 
-##chineseVersion
+
+#chineseVersion
 **示例:** https://cenkai88.github.io/vue-svg-icon/demo/  
 **特点:** 
 - **不再需要通过inject注册SVG**
