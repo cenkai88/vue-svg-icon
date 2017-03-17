@@ -2,7 +2,7 @@
 > a solution for multicolor svg icons in vue2
 > [轻量的Vue2多色动态svg图标方案 中文版说明](#chineseversion)
 
-##### v1.2.3 
+##### v1.2.9
 
 **demo:** https://cenkai88.github.io/vue-svg-icon/demo/  
 **features:** 
@@ -44,17 +44,21 @@ Vue.component('icon', Icon);
 ```
 [Vue warn]: Invalid prop: custom validator check failed for prop "name". 
 ```
-
-## develop
-download the package from git
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
+2. cannot find the "svg" fold in src folder
 ```
-  
+This dependency was not found:
+   
+   * !xml-loader!../../src/svg in ./~/.6.4.1@babel-loader/lib!./~/.11.1.4@vue-loader/lib/selector.js?type=script&index=0!./~/.1.2.8@vue-svg-icon/Icon.vue
+   
+   To install it, you can run: npm install --save !xml-loader!../../src/svg
+```
+3. pls check the .babelrc file of root folder
+```
+Module build failed: ReferenceError: Unknown plugin "transform-runtime"
+ specified in "/Users/test/Desktop/Dev/github/.babelrc" at 0, attempted to resolve relative to 
+ "/Users/test/Desktop/Dev/github"
+```
+
 ## 中文版本说明
 **示例:** https://cenkai88.github.io/vue-svg-icon/demo/  
 **特点:** 
