@@ -35,7 +35,7 @@
 
 <script>
 
-  const convert = require('./parse');
+  const convert = require('./lib/parse');
 
   export default {
     props: {

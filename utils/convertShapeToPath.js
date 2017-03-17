@@ -100,7 +100,7 @@ function lineHandler(node) {
   };
 }
 
-exports.fn = function (node, type) {
+module.exports = function (node, type) {
   if (!type)return;
   // console.log(node, type)
   switch (type.toLowerCase()) {
