@@ -2,7 +2,7 @@
 > a solution for multicolor svg icons in vue2
 > [轻量的Vue2多色动态svg图标方案 中文版说明](#chineseversion)
 
-##### v1.2.2 
+##### v1.2.3 
 
 **demo:** https://cenkai88.github.io/vue-svg-icon/demo/  
 **features:** 
@@ -88,7 +88,7 @@ Vue.component('icon', Icon);
 - ~~注意illustrator中所有的矩形线段等等需转成复合路径再保存。~~（v1.1.0后不再需要)
 - 第一次编辑完保存时，请选择"另存为"，在"高级选项"中将"css属性"设置成**演示文稿属性**  
 - 需要通过css动态设置颜色等部分请将填充色设为纯黑(#000000)，如果想设置黑色但不受SVG的color影响请将填充色设为(#000001)
-- 描边的颜色同样可在illustrator或sketch中设为纯黑(#000000)，然后通过icon的CSS中**sketch**属性来动态控制 (自v1.1.0起)。
+- 描边的颜色同样可在illustrator或sketch中设为纯黑(#000000)，然后通过icon的CSS中**stroke**属性来动态控制 (自v1.1.0起)。
 - 推荐SVG尺寸为200*200
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -76,6 +76,7 @@
       icon() {
         let xml = require(`!xml-loader!../../src/svg/${this.name}.svg`);
         const t = xml.svg.$.viewBox.split(' ');
+        console.info(`src/svg/${this.name}.svg has been loaded`);
         return {
           width: t[2],
           height: t[3],
@@ -100,7 +101,7 @@
         }
       }
     },
-    inject: function () {
+    register: function () {
       console.warn("inject deprecated since v1.2.0, SVG files can be loaded directly, so just delete the inject line.")
     },
   }

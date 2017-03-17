@@ -1,9 +1,7 @@
 "use strict";
-
-const convertShapeToPath = require("./convertShapeToPath").fn
-
 //  将SVG转换为数组
 function SVGtoArray(svgObj) {
+  const convertShapeToPath = require("./convertShapeToPath").fn
   let SVGArray = [];
   let node, subNode, groupNode, subsubNode;
 
