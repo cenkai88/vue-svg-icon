@@ -14,7 +14,7 @@ function SVGtoArray(svgObj) {
     else if (node === 'g') {
       for (groupNode of svgObj[node]) {
         for (subNode in groupNode) {
-          if (node ==='rect' || node === 'circle'|| node ==='ellipse'|| node === 'polygon'|| node ==='line'|| node === 'path') {
+          if (subNode ==='rect' || subNode === 'circle'|| subNode ==='ellipse'|| subNode === 'polygon'|| subNode ==='line'|| subNode === 'path') {
             for (subsubNode of groupNode[subNode]) {
               SVGArray.push(convertShapeToPath(subsubNode.$, subNode))
             }
