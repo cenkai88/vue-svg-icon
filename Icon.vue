@@ -76,7 +76,7 @@
       icon() {
         let xml = require(`!xml-loader!../../src/svg/${this.name}.svg`);
         const t = xml.svg.$.viewBox.split(' ');
-        console.info(`src/svg/${this.name}.svg has been loaded`);
+        if (process.env.NODE_ENV !== 'production') console.info(`src/svg/${this.name}.svg has been loaded`);
         return {
           width: t[2],
           height: t[3],
